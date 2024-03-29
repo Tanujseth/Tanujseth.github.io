@@ -1,0 +1,291 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #003366; /* Dark blue */
+    color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #222;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* style for index.html */
+#hero {
+    background-image: url('assets/images/background_1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    color: #ffffff; /* A deep blue shade */
+}
+
+.hero-content h1 {
+    color: inherit;
+    font-size: 2.5em;
+    margin-bottom: 0.5em; /* Ensures space between the headline and subtext */
+}
+
+.hero-content p {
+    color: inherit;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.cta-button {
+    background-color: #e67e22; /* Adjust to fit your color scheme */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.5em;
+}
+
+.cta-button:hover {
+    background-color: #d35400;
+}
+
+#about-me-teaser {
+    background-color: #bac3cc; /* Light background to contrast with the hero section */
+    padding: 50px 0;
+}
+
+#about-me-teaser .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.profile-photo {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about-me-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.about-me-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #004494;
+}
+
+
+#featured-projects {
+    position: relative;
+    background-image: url('assets/images/background_2.jpg');
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #ffffff; /* Adjust text color for readability, if necessary */
+    padding: 50px 0; /* Adjust padding as needed */
+    overflow: hidden;
+}
+
+#featured-projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+
+#featured-projects .container {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+}
+
+.technologies-used {
+    display: flex;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: space-around; /* Adjust based on your design preference */
+    flex-wrap: wrap; /* Allows logos to wrap on smaller screens */
+    margin-top: 20px; /* Spacing above the container */
+}
+
+.technologies-used img {
+    height: 50px; /* Adjust based on your logo sizes and preferences */
+    margin: 5px; /* Adds space around each logo */
+    opacity: 0.8; /* Slightly toned down to blend with the design */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.technologies-used img:hover {
+    opacity: 1; /* Logo fully opaque on hover for a little interaction */
+}
+
+.outcomes, .project-reflections {
+    list-style-type: disc; /* or circle, square, etc., depending on your preference */
+    padding-left: 20px; /* Adjusts spacing to the left of the bullet points */
+}
+
+.outcomes li, .project-reflections li {
+    margin-bottom: 10px; /* Adds space between list items for readability */
+    font-size: 0.9em; /* Adjusts the font size for the list items */
+    color: #F0F0F0; /* Sets the text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.project-reflections-title, .outcomes-title, .technologies-title {
+    font-weight: bold; /* Makes titles bold */
+    margin-top: 20px; /* Adds space above the titles */
+}
+
+/* Hover effect for project cards */
+.project:hover {
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-cta {
+    background-color: #0A192F; /* Dark background for contrast */
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact-cta .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+#contact-cta h2 {
+    margin: 0 0 20px;
+    font-size: 2.5em;
+    color: #64ffda; /* A vibrant color for the header to stand out */
+}
+
+#contact-cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+
+
+/* end of style for index.html */
