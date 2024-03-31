@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.xing {
+    background-color: #006567;
+}
+
+.contact-link:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,395 @@
+#about-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #f5f5f5; /* or any color that matches your main page */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.profile-photo {
+    animation: fadeInScaleUp 0.5s ease-out forwards;
+    border-radius: 50%;
+    width: 30%; /* Adjust size as needed */
+    max-width: 150px; /* Maximum size */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    border: 3px solid #003366; /* Optional: Adds a white border for contrast against backgrounds */
+}
+
+.intro-text h1 {
+    color: #333; /* or any color that matches your main page */
+    font-size: 2.5em;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    color: #666; /* Adjust for readability */
+}
+
+@media (max-width: 768px) {
+    #about-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        margin-bottom: 20px; /* Adds spacing between the photo and the text on smaller screens */
+    }
+    .timeline-content {
+        margin-left: 20px;
+    }
+
+    .timeline-marker {
+        left: -7px;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill {
+        grid-template-columns: 40% 60%; /* Adjust for smaller screens for better readability */
+    }
+}
+
+#what-drives-me {
+    background-color: #bac3cc; /* Light background to contrast with the hero section */
+    padding: 50px 0;
+}
+
+#what-drives-me .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+    
+}
+
+.what-drives-me h2 {
+    margin-top: 0;
+    color: #333;
+    
+}
+
+.what-drives-me p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+#professional-timeline .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #007bff; /* Or any color that fits your theme */
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -9px; /* Adjust based on the line width */
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 4px solid #007bff; /* Match the timeline's color */
+}
+
+.timeline-content {
+    margin-left: 30px;
+}
+
+.nested-timeline-item {
+    margin-bottom: 20px;
+    border-left: 3px solid #007bff;
+    padding-left: 15px;
+    position: relative;
+}
+
+.timeline-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-header-content h4, .timeline-header-content h5 {
+    margin: 0; /* Removes default margins for a cleaner look */
+    color: #333; /* Dark color for text */
+}
+
+.timeline-header-content h5 {
+    font-weight: normal;
+    color: #666; /* Lighter color for dates and company name */
+}
+
+.toggle-icon {
+    font-weight: bold;
+    margin-right: 10px;
+    user-select: none; /* Prevents text selection */
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #007bff; /* Theme color for consistency */
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #666;
+}
+
+.project-details {
+    padding: 10px;
+    display: none; /* Hidden by default */
+    background-color: #f0f0f0;
+    border-left: 2px solid #007bff; /* Adds a visual cue for nested items */
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.nested-timeline-item h4 {
+    cursor: pointer;
+    color: #007bff; /* Interactive color for headers */
+}
+
+.project-details ul {
+    list-style-type: disc; /* Default bullet style, can be changed */
+    padding-left: 20px; /* Adjusts spacing for the bullet points */
+    margin: 0; /* Removes default margin for cleaner spacing */
+}
+
+.project-details li {
+    margin-bottom: 10px; /* Adds space between bullet points for readability */
+    color: #666; /* Optional: Adjusts the text color */
+    line-height: 1.5; /* Improves readability */
+}
+
+.role-detail {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.role-detail h5, h6 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #007bff; /* Adjust the color to fit your design */
+}
+
+.role-detail p, .role-detail ul {
+    font-size: 0.95em; /* Slightly smaller font size for details */
+}
+
+.role-detail h6 {
+    font-size: smaller; /* Optionally adjust the font size of h6 for better hierarchy */
+}
+
+.role-detail ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 0; /* Reduces space between the list and the preceding element */
+    margin-bottom: 10px; /* Adjusts spacing after the list */
+}
+
+.role-detail ul li {
+    font-size: 0.95em; /* Optionally adjust the list item font size for compactness */
+    line-height: 0.7; /* Decreases the line height to make the list more compact */
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between the skills sections */
+}
+
+.technical-skills, .soft-skills {
+    flex: 1;
+    min-width: 300px; /* Ensures the container doesn't get too narrow */
+}
+
+.technical-skills h3, .technical-skills h4, .soft-skills h3, .soft-skills h4 {
+    text-align: center; /* Centers the headings */
+    margin-bottom: 20px; /* Adds some space below the headings */
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 30% 70%; /* Adjusts the column widths */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    /* Styling for the skill name */
+    text-align: right;
+    padding-right: 10px; /* Adds some space between the text and the bar */
+}
+
+.skill-bar {
+    width: 30%;
+    background-color: #ddd;
+    position: relative;
+    height: 20px;
+    display: inline-block;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #007bff;
+}
+
+.skill-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 100%;
+    margin-left: 10px;
+    transform: translateY(-50%); /* Center it vertically relative to the bar */
+
+    /* Hide the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.skill-bar:hover .skill-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+[data-level="basic"]::after { width: 25%; }
+[data-level="intermediate"]::after { width: 50%; }
+[data-level="professional"]::after { width: 75%; }
+[data-level="expert"]::after { width: 100%; }
+
+#personal-insights .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+#personal-insights .timeline {
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+}
+
+#personal-insights .timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #007bff; /* Or any color that fits your theme */
+}
+
+#personal-insights .timeline-item {
+    margin-bottom: 20px;
+}
+
+#personal-insights .timeline-marker {
+    position: absolute;
+    left: -9px; /* Adjust based on the line width */
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 4px solid #007bff; /* Match the timeline's color */
+}
+
+#personal-insights .timeline-content {
+    margin-left: 30px;
+}
+
+#personal-insights .timeline-content h3 {
+    margin-top: 0;
+    color: #007bff; /* Theme color for consistency */
+}
+
+#personal-insights .timeline-content p {
+    margin: 0;
+    color: #666;
+}
+
+#personal-insights .timeline-content ul {
+    list-style-type: disc; /* Default bullet style, can be changed */
+    padding-left: 20px; /* Adjusts spacing for the bullet points */
+    margin: 0; /* Removes default margin for cleaner spacing */
+}
+
+#personal-insights .timeline-content li {
+    margin-bottom: 10px; /* Adds space between bullet points for readability */
+    color: #666; /* Optional: Adjusts the text color */
+    line-height: 1.5; /* Improves readability */
+}
+
+.toggle-icon {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+.timeline-content h3 {
+    cursor: pointer; /* Indicates the whole header is clickable */
+}

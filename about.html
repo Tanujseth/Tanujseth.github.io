@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - My Portfolio</title>
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <!-- Ensure you link to any additional CSS files specific to the index page here -->
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="logo">Tanuj Seth</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <!-- <li><a href="projects.html">Projects</a></li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="about-intro">
+                <div class="container">
+                    <img src="assets/images/profile_img_2.jpg" alt="Your Name" class="profile-photo">
+                    <div class="intro-text">
+                        <h1>Hello, I'm Tanuj</h1>
+                        <p>I'm an Automation Engineer passionate about leveraging technology to push the boundaries in research and application. An adept problem-solver with a passion for Deep Learning and a proven track record in Prototyping innovative solutions, I am driven to tackle challenging issues with strategic insight and technical agility. Welcome to my professional space where I share my journey, projects, and insights.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="what-drives-me">
+                <div class="container">
+                    <h2>What Drives Me</h2>
+                    <p>At the heart of my professional journey lies a relentless curiosity and a passion for solving complex problems. I thrive on the challenge of transforming ideas into tangible prototypes, learning and growing with every project I undertake. While I may not claim to be the best programmer or software engineer, my strength lies in a project-based approach that leverages my keen problem-solving skills and a hands-on method to innovation.</p>
+                    <p>What drives me is the joy of discovery and the satisfaction of seeing a project come to fruition. It’s about the journey as much as the destination — embracing each challenge, celebrating each breakthrough, and always looking forward to the next puzzle to solve. This is what fuels my passion for technology and innovation, and it’s what motivates me to push the boundaries of what's possible.</p>
+                </div>
+            </section>
+
+            <section id="professional-timeline">
+                <div class="container">
+                    <h2>Professional Timeline</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content" data-aos="fade-up" data-aos-delay="100">
+                                <h3>2018 - Present</h3>
+                                <div class="nested-timeline">
+                                    <!-- Nested Project 1 -->
+                                    <div class="nested-timeline-item">
+                                        <div class="timeline-header" onclick="toggleCollapse('project1-details', this)">
+                                            <div class="timeline-header-content">
+                                                <h4>Working-Student Digital Innovation <span class="toggle-icon">+</span></h4>
+                                                <h5>05/2023 - 02/2024</h5>
+                                                <h5>Hänssler Kunststoff - und Dichtungstechnik GmbH, Mannheim </h5>
+                                                <h5>Mannheim, Germany </h5>
+                                            </div>
+                                        </div>
+                                        <div id="project1-details" class="project-details" style="display: none;">
+                                            <ul>
+                                                <li>Led the development of an AI-based system for chip detection on turning machines, enhancing operational efficiency.</li>
+                                                <li>Engineered a comprehensive pipeline from data acquisition and preparation to model training and inference, ensuring robust system performance.</li>
+                                                <li>Implemented the YOLOv8 object detection model for error classification.</li>
+                                                <li>Designed and developed prototypes for development and production environments using Jetson Nano, 
+                                                    Raspberry Pi, and Linux Server.</li>
+                                                <li>Managed code versioning (GitLab) and maintained thorough internal documentation, including UML 
+                                                    diagrams, PDFs, and presentations, to support project continuity and team collaboration.</li>
+                                            </ul>    
+                                        </div> 
+                                    </div>
+                                    <!-- Nested Project 2 -->
+                                    <div class="nested-timeline-item">
+                                        <div class="timeline-header" onclick="toggleCollapse('project2-details', this)">
+                                            <div class="timeline-header-content">
+                                                <h4>Working-Student Project Developer (full-stack) <span class="toggle-icon">+</span></h4>
+                                                <h5>09/2023 - 04/2024</h5>
+                                                <h5>AStA Hochschule Mannheim </h5>
+                                                <h5>Mannheim, Germany </h5>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="project2-details" class="project-details" style="display: none;">
+                                            <ul>
+                                                <li>Conceptualized and developed a digital inventory and lending system tailored for university members.</li>
+                                            </ul>    
+                                        </div> 
+                                    </div>
+                                    <!-- Nested Project 3 -->
+                                    <div class="nested-timeline-item">
+                                        <div class="timeline-header" onclick="toggleCollapse('project3-details', this)">
+                                            <div class="timeline-header-content">
+                                                <h4>R&D Artificial Intelligence Apllication (multiple roles) <span class="toggle-icon">+</span></h4>
+                                                <h5>05/2021 - 01/2023</h5>
+                                                <h5>ProMinent Group</h5>
+                                                <h5>Heidelberg, Germany </h5>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="project3-details" class="project-details" style="display: none;">
+                                            <!-- Working Student Role -->
+                                            <div class="role-detail">
+                                                <h5><em>Bachelor Thesis</em></h5>
+                                                <h6><strong>Period:</strong> 10/2022 - 01/2023</h6>
+                                                <ul>
+                                                    <li><b>Title:</b> "Einsatz von künstlicher Intelligenz zur Erkennung von Luft in Dosierpumpen“</li>
+                                                    <li>Successfully commissioned a deep learning model (TensorFlow Lite) on an Arduino Nano microcontroller(TinyML).</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Bachelor Thesis Role -->
+                                            <div class="role-detail">
+                                                <h5><em>Working-Student</em></h5>
+                                                <h6><strong>Period:</strong> 07/2022 - 09/2022</h6>
+                                                <ul>
+                                                    <li>Conducted extensive  R&D on DL model architectures (CNNs) and (ResNets), for effective 
+                                                        classification of time series data.</li>
+                                                    <li>Leveraged TensorFlow, Keras, and scikit-learn to optimize model performance and accuracy.</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Internship Role -->
+                                            <div class="role-detail">
+                                                <h5><em>Mandatory Internship</em></h5>
+                                                <h6><strong>Period:</strong> 09/2021 - 01/2022</h6>
+                                                <ul>
+                                                    <li><b>Title:</b> "Optimierung der Lufterkennungstechnik"</li>
+                                                    <li>Utilized advanced statistical methods for data measurement, labeling, preparation, and exploration.</li>
+                                                    <li>Conducted R&D on integrating AI to advance the functionality and efficiency of dosing pumps</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Internship Role -->
+                                            <div class="role-detail">
+                                                <h5><em>Working-Student</em></h5>
+                                                <h6><strong>Period:</strong> 05/2021 - 08/2021</h6>
+                                                <ul>
+                                                    <li>Analyzed and processed data to construct a comprehensive database.</li>
+                                                    <li>Executed precise measurements of magnetic dosing pumps in a testing laboratory.</li>
+                                                </ul>
+                                            </div>
+                                       
+                                        </div> 
+                                    </div>
+
+                                    <!-- Nested Project 4 -->
+                                    <div class="nested-timeline-item">
+                                        <div class="timeline-header" onclick="toggleCollapse('project4-details', this)">
+                                            <div class="timeline-header-content">
+                                                <h4>Working-Student <span class="toggle-icon">+</span></h4>
+                                                <h5>10/2018 - 04/2021</h5>
+                                                <h5>Decathlon Deutschland (DD) Logistik Vertriebs GmbH  </h5>
+                                                <h5>Schwetzingen, Germany </h5>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="project4-details" class="project-details" style="display: none;">
+                                            <ul>
+                                            </ul>    
+                                        </div> 
+                                    </div>
+
+                                    <!-- Nested Project 5 -->
+                                    <div class="nested-timeline-item">
+                                        <div class="timeline-header" onclick="toggleCollapse('project5-details', this)">
+                                            <div class="timeline-header-content">
+                                                <h4>Working-Student IT Anylyst <span class="toggle-icon">+</span> </h4>
+                                                <h5>06/2018 - 08/2018</h5>
+                                                <h5>HCL Technologies</h5>
+                                                <h5>Vilnius, Lithuania</h5>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="project5-details" class="project-details" style="display: none;">
+                                            <ul>
+                                            </ul>    
+                                        </div> 
+                                    </div>
+                                    <!-- Add more nested projects as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Other timeline items -->
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="skills-section">
+                    <div class="technical-skills" data-aos="fade-right">
+                        <h3>Core Technical Skills</h3>
+                        <h4>Programming Languages</h4>
+                        <div class="skill">
+                            <div class="skill-name">Python (VS Code, PyCharm)</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip">professional</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">C++</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">MATLAB</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Shell scripting (Ubuntu)</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">PLC Programming (Codesys)</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <h4>Artificial Intelligence and Analytics</h4>
+                        <div class="skill">
+                            <div class="skill-name">Deep Learning (TensorFlow, Keras)</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip">professional</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Computer Vision (OpenCV, Yolov8)</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Image Processing</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Data Analysis (Pandas, NumPy)</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <h4>Hardware Programming and Prototyping</h4>
+                        <div class="skill">
+                            <div class="skill-name">Raspberry Pi</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip">professional</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Jetson Nano</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Arduino</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">MSP 430 Controllers</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <!-- Add more technical skills -->
+                    </div>
+                    <div class="technical-skills" data-aos="fade-right">
+                        <h3>Supplementary Technical Skills</h3>
+                        <h4>Web Development and Databases</h4>
+                        <div class="skill">
+                            <div class="skill-name">HTML&CSS</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Flask</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">SQLite</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <h4>Tools and Technologies</h4>
+                        <div class="skill">
+                            <div class="skill-name">Word, Excel, PowerPoint</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip">professional</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">GitLab (Version Control)</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Docker (Containerization)</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">CUDA</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Thingworx & Lua</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Latex</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">AutoCAD</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>
+                        </div>
+                        <!-- Add more technical skills -->
+                    </div>
+                    
+                    <div class="soft-skills" data-aos="fade-left">
+                        <h3>Soft Skills</h3>
+                        <h4>Interpersonal Skills</h4>
+                        <div class="skill">
+                            <div class="skill-name">Team Player</div>
+                            <div class="skill-bar" data-level="expert">
+                                <span class="skill-tooltip">expert</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Problem-solving Abilities</div>
+                            <div class="skill-bar" data-level="expert">
+                                <span class="skill-tooltip">expert</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Innovative Thinking and Creativity</div>
+                            <div class="skill-bar" data-level="expert">
+                                <span class="skill-tooltip">expert</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Adaptability and Continuous Learning</div>
+                            <div class="skill-bar" data-level="expert">
+                                <span class="skill-tooltip">expert</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Work Ethic</div>
+                            <div class="skill-bar" data-level="expert">
+                                <span class="skill-tooltip">expert</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Communication and Presentation Skills</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip">professional</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Leadership & Team Managment</div>
+                            <div class="skill-bar" data-level="intermediate">
+                                <span class="skill-tooltip">intermediate</span>
+                            </div>
+                        </div>
+                        <h4>Languages</h4>
+                        <div class="skill">
+                            <div class="skill-name">English</div>
+                            <div class="skill-bar" data-level="expert">
+                                <span class="skill-tooltip">expert</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">German (C1)</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip">professional</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Hindi</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip"> multilingual</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Punjabi</div>
+                            <div class="skill-bar" data-level="professional">
+                                <span class="skill-tooltip"> multilingual</span>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Lithuanian (A1)</div>
+                            <div class="skill-bar" data-level="basic">
+                                <span class="skill-tooltip">basic</span>
+                            </div>    
+                        </div>
+                        <!-- Repeat for other skills -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="personal-insights">
+                <div class="container">
+                    <h2>Volunteer Work</h2>
+                    <div class="timeline" data-aos="fade-up" data-aos-delay="50">
+                        <!-- Volunteer Experience 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content" onclick="toggleCollapse('volunteer1-details', this)">
+                                <h3>Hochschule Mannheim <span class="toggle-icon">+</span></h3>
+                                <p><strong>Role:</strong> Student Council Speaker (Fachschaftssprecher der Fakultät für Elektrotechnik) </p>
+                                <p><strong>Period:</strong> 09/2022 - 08/2023</p>        
+                                <div id="volunteer1-details" class="project-details" style="display: none;">
+                                    <ul>
+                                        <li>Represented student interests in key discussions and decisions.</li>
+                                        <li>Led, Co-organized and executed various Student events and initiatives.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content" onclick="toggleCollapse('volunteer2-details', this)">
+                                <h3>Delta Racing Mannheim e.V <span class="toggle-icon">+</span></h3>
+                                <p><strong>Role:</strong> Department head Chassis (Formula Student Team)</p>
+                                <p><strong>Period:</strong> 04/2022 - 06/2023</p>
+                                <div id="volunteer2-details" class="project-details" style="display: none;">
+                                    <ul>
+                                        <li>Lead the development and production of the monocoque chassis.</li>
+                                        <li>Manufactured aerodynamic components made of carbon fiber (front wing, rear wing).</li>
+                                        <li>Laminated and tested Pre-preg carbon fiber test panels.</li>
+                                        <li>Team member at Formula Student Germany 2022.</li>
+                                    </ul> 
+                                </div>    
+                            </div>
+                        </div>
+                        <!-- More volunteer experiences as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-cta">
+                <div class="container">
+                    <h2>Let's Collaborate</h2>
+                    <p>Have a project in mind or any queries? Don't hesitate to reach out.</p>
+                     <a href="contact.html" class="cta-button">Contact Me</a> 
+                    <!--<a href="#" title="Page under development. Stay tuned!">Contact Me</a>-->
+                </div>
+            </section>
+        </main>
+
+    </body>
+</html>    
+
+<script>
+    function toggleCollapse(detailsId, element) {
+    var details = document.getElementById(detailsId);
+    var icon = element.querySelector('.toggle-icon');
+    if (details.style.display === "none" || !details.style.display) {
+        details.style.display = "block";
+        icon.textContent = "−"; // Changes the icon to '−' when expanded
+    } else {
+        details.style.display = "none";
+        icon.textContent = "+"; // Reverts back to '+' when collapsed
+    }
+}
+AOS.init();
+</script>
