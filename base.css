@@ -262,6 +262,26 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.more-content {
+    display: none;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    background-color: #007bff;
+    margin: 20px auto;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block; /* Ensure the button is easily clickable */
+    margin-top: 10px;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
 #contact-cta {
     background-color: #0A192F; /* Dark background for contrast */
     color: #ffffff;
