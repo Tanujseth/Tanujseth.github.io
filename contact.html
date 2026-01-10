@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Tanuj Seth</title>
+    <title>Contact</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="contact.css" />
   </head>
@@ -12,7 +13,10 @@
     <header>
       <div class="header-content">
         <a href="index.html" class="logo">Tanuj Seth</a>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <nav class="nav">        
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Use Cases</a></li>
@@ -32,19 +36,24 @@
           </p>
 
           <div class="cards-grid contact-grid" style="margin-top: 18px;">
-            <a class="card contact-card" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/tanujseth" class="card card-contact" target="_blank" rel="noopener noreferrer">
               <h3>LinkedIn</h3>
-              <span class="link">Open profile</span>
             </a>
 
-            <a class="card contact-card" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.xing.com/profile/tanuj_seth2" class="card card-contact" target="_blank" rel="noopener noreferrer">
               <h3>Xing</h3>
-              <span class="link">Open profile</span>
             </a>
           </div>
         </div>
       </section>
     </main>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
 
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
   </body>
 </html>

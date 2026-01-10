@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beyond Projects | Tanuj Seth</title>
+    <title>Beyond Projects</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="about.css" />
   </head>
@@ -11,7 +12,10 @@
     <header>
       <div class="header-content">
         <a href="index.html" class="logo">Tanuj Seth</a>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Use Cases</a></li>
@@ -100,11 +104,11 @@
           <div class="cards-grid" style="margin-top: 18px;">
             <div class="card">
               <h3>Mentoring</h3>
-              <p class="muted">Task planning, feedback, and guidance for junior team members and interns.</p>
+              <p class="muted">Task planning, feedback, and guidance for team members.</p>
             </div>
             <div class="card">
               <h3>Thesis supervision</h3>
-              <p class="muted">Support for bachelor thesis topics with a focus on applied AI and practical evaluation.</p>
+              <p class="muted">Support for internships and thesis topics with a focus on Data and AI.</p>
             </div>
           </div>
         </div>
@@ -119,5 +123,13 @@
         </div>
       </footer>
     </main>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
   </body>
 </html>

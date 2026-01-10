@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Use Cases | Tanuj Seth</title>
+    <title>Use Cases</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="about.css" />
   </head>
@@ -11,7 +12,10 @@
     <header>
       <div class="header-content">
         <a href="index.html" class="logo">Tanuj Seth</a>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Use Cases</a></li>
@@ -44,7 +48,7 @@
 
             <section class="section" id="meter-reading">
         <div class="container">
-          <h2>AI Based Meter Reading SaaS Pipeline</h2>
+          <h2>AI Based Meter Reading</h2>
           <p class="muted">
             Manual meter reading is time consuming and error prone at scale. The objective was to design an AI based system that automates meter reading from images while maintaining accuracy, transparency, and human validation.
           </p>
@@ -217,5 +221,13 @@
         </div>
       </footer>
     </main>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
   </body>
 </html>
