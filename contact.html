@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="base.css" />
-    <link rel="stylesheet" href="contact.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Tanuj Seth</title>
+  <link rel="stylesheet" href="base.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Tanuj Seth</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="perspective.html">Perspective</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <body>
-    <header>
-      <div class="header-content">
-        <a href="index.html" class="logo">Tanuj Seth</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          ☰
-        </button>
-        <nav class="nav">        
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Use Cases</a></li>
-            <li><a href="practice.html">Beyond Projects</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Professional exchange</p>
+        <h1>Contact</h1>
+        <p class="page-intro">
+          For collaboration, applied AI projects, enterprise AI implementation, SAP Business AI topics,
+          or professional exchange, the channels below are the best way to reach out.
+
+        </p>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <h1 class="page-title">Contact</h1>
-          <p class="page-intro muted">
-            For collaboration, applied AI projects, or professional exchange, the channels below are the best way to reach out.
-          </p>
-
-          <div class="cards-grid contact-grid" style="margin-top: 18px;">
-            <a href="https://www.linkedin.com/in/tanujseth" class="card card-contact" target="_blank" rel="noopener noreferrer">
-              <h3>LinkedIn</h3>
-            </a>
-
-            <a href="https://www.xing.com/profile/tanuj_seth2" class="card card-contact" target="_blank" rel="noopener noreferrer">
-              <h3>Xing</h3>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script>
-        const toggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
-
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-    </script>
-  </body>
+    <section class="section">
+      <div class="container contact-grid grid-2">
+        <a href="https://www.linkedin.com/in/tanujseth" class="card contact-card" target="_blank" rel="noopener noreferrer">
+          <h3>LinkedIn</h3>
+        </a>
+        <a href="https://www.xing.com/profile/tanuj_seth2" class="card contact-card" target="_blank" rel="noopener noreferrer">
+          <h3>Xing</h3>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Use Cases</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="base.css" />
-    <link rel="stylesheet" href="about.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header-content">
-        <a href="index.html" class="logo">Tanuj Seth</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          ☰
-        </button>
-        <nav class="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Use Cases</a></li>
-            <li><a href="practice.html">Beyond Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work | Tanuj Seth</title>
+  <link rel="stylesheet" href="base.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Tanuj Seth</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="work.html">Work</a></li>
+          <li><a href="perspective.html">Perspective</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="section">
-        <div class="container">
-          <h1 class="page-title">Use Cases</h1>
-          <p class="page-intro muted">
-            A curated set of AI based systems. Each case highlights context, constraints, technical decisions, and lessons learned.
-          </p>
-          <div class="card" style="margin-top: 18px;">
-          <h3>On this page</h3>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Selected applied AI cases</p>
+        <h1>Work</h1>
+        <p class="page-intro">
+          A curated set of AI based systems. Each case highlights context, value questions, constraints,
+          technical decisions, operational considerations, and lessons learned.
+        </p>
+        <div class="page-index">
           <div class="tag-row">
             <a class="tag-link" href="#meter-reading">Meter reading</a>
             <a class="tag-link" href="#chip-detection">Chip detection</a>
@@ -42,192 +40,83 @@
             <a class="tag-link" href="#edge-anomaly">Edge anomaly detection</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section case-section" id="meter-reading">
+      <div class="container case-layout">
+        <aside class="case-meta">
+          <p class="eyebrow">Computer vision · OCR · Validation</p>
+          <h2>AI based meter reading</h2>
+          <p>Automation of meter reading from images while maintaining accuracy, transparency, and human validation.</p>
+        </aside>
+        <div class="stack">
+          <article class="card"><h3>Context</h3><p>Manual meter reading is time consuming and error prone at scale. Images vary strongly across meter types, lighting conditions, layouts, and image quality.</p></article>
+          <article class="card"><h3>Value question</h3><p>Can relevant meter information be extracted reliably enough to reduce manual effort while keeping validation and correction paths clear?</p></article>
+          <article class="card"><h3>Constraints</h3><ul class="clean-list"><li>High variability in meter types, layouts, and visual conditions</li><li>Extraction of meter number, meter reading, OBIS, and barcodes</li><li>Limited labeled data at project start</li><li>Need for human-in-the-loop validation</li></ul></article>
+          <article class="card"><h3>Approach</h3><p>A custom object detection model was trained to locate relevant fields. A separate OCR model was fine tuned on custom data. Labeling, post processing, and manual validation were designed as a feedback loop for continuous improvement.</p></article>
+          <article class="card"><h3>Operational considerations</h3><p>The system needed more than accurate predictions. It required traceable outputs, structured correction, validation workflows, and a process for turning errors into better training data.</p></article>
+          <article class="card"><h3>Outcome and reflection</h3><p>The resulting system extracted structured meter information across varying conditions. The main learning was that labeling strategy and validation workflows are as important as model architecture for production quality.</p></article>
         </div>
+      </div>
+    </section>
 
-      </section>
-
-            <section class="section" id="meter-reading">
-        <div class="container">
-          <h2>AI Based Meter Reading</h2>
-          <p class="muted">
-            Manual meter reading is time consuming and error prone at scale. The objective was to design an AI based system that automates meter reading from images while maintaining accuracy, transparency, and human validation.
-          </p>
-
-          <div class="split" style="margin-top: 18px;">
-            <div class="card">
-              <h3>Constraints</h3>
-              <ul class="clean-list">
-                <li>High variability in meter types, layouts, and visual conditions</li>
-                <li>Extraction of meter number, meter reading, OBIS, and barcodes</li>
-                <li>Limited labeled data at project start</li>
-                <li>Need for human in the loop validation</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Approach</h3>
-              <p class="muted">
-                The solution was conceptualized as an end to end pipeline. A custom object detection model was trained from scratch to locate relevant fields. A separate OCR model was fine tuned on custom data.
-                Labeling, post processing, and manual validation were designed to create a feedback loop for continuous improvement.
-              </p>
-              <div class="tag-row">
-                <span class="tag">Computer vision</span>
-                <span class="tag">OCR</span>
-                <span class="tag">Human validation</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top: 18px;">
-            <h3>Outcome and reflection</h3>
-            <p class="muted">
-              The resulting system extracted structured meter information across varying conditions. Combining detection with fine tuned OCR improved robustness compared to generic solutions.
-              The main learning was that labeling strategy and validation workflows are as important as model architecture for production quality.
-            </p>
-          </div>
+    <section class="section surface case-section" id="chip-detection">
+      <div class="container case-layout">
+        <aside class="case-meta">
+          <p class="eyebrow">Manufacturing · Computer vision · Edge</p>
+          <h2>AI based chip detection system</h2>
+          <p>Detection and classification of chip related anomalies directly in production conditions.</p>
+        </aside>
+        <div class="stack">
+          <article class="card"><h3>Context</h3><p>In turning processes, unrecognized chip accumulation can lead to quality issues, downtime, and increased manual inspection effort.</p></article>
+          <article class="card"><h3>Value question</h3><p>Can visual detection provide reliable real-time feedback for operators and create a basis for scalable inspection solutions?</p></article>
+          <article class="card"><h3>Constraints</h3><ul class="clean-list"><li>Limited and noisy visual data from industrial environments</li><li>Real-time inference requirements on edge hardware</li><li>Integration into existing production and monitoring systems</li><li>Clear feedback for machine operators</li></ul></article>
+          <article class="card"><h3>Approach</h3><p>The system was developed end to end, from real-condition data acquisition and labeling to a robust computer vision pipeline. The solution included a Linux based inference server, an operator interface, and a mobile data acquisition setup.</p></article>
+          <article class="card"><h3>Operational considerations</h3><p>Model behavior, hardware constraints, data quality, operator interaction, and integration with production processes had to be treated together rather than as separate concerns.</p></article>
+          <article class="card"><h3>Outcome and reflection</h3><p>The system achieved reliable chip detection and classification in operational conditions. The key learning was that production AI succeeds only when the model, data loop, deployment environment, and user feedback are aligned.</p></article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section surface" id="chip-detection">
-        <div class="container">
-          <h2>AI Based Chip Detection System</h2>
-          <p class="muted">
-            In a manufacturing environment, unrecognized chip accumulation during turning processes can lead to quality issues, downtime, and increased manual inspection.
-            The goal was to design an AI based system capable of detecting and classifying chip related anomalies directly in production conditions.
-          </p>
-
-          <div class="split" style="margin-top: 18px;">
-            <div class="card">
-              <h3>Constraints</h3>
-              <ul class="clean-list">
-                <li>Limited and noisy visual data from industrial environments</li>
-                <li>Real time inference requirements on edge hardware</li>
-                <li>Integration into existing production and monitoring systems</li>
-                <li>Clear feedback for machine operators</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Approach</h3>
-              <p class="muted">
-                The system was developed end to end, starting with data acquisition and labeling in real conditions. A computer vision pipeline was designed with a focus on robustness.
-                Beyond model training, the solution included a Linux based inference server, an operator interface, and a mobile data acquisition setup to continuously improve training data.
-              </p>
-              <div class="tag-row">
-                <span class="tag">Computer vision</span>
-                <span class="tag">Deployment</span>
-                <span class="tag">Iterative data</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top: 18px;">
-            <h3>Outcome and reflection</h3>
-            <p class="muted">
-              The resulting system achieved reliable chip detection and classification in operational conditions. It provided real time feedback to operators and established a foundation for scaling similar inspection solutions.
-              The key learning was that model performance, data quality, hardware constraints, and user interaction all influence the final outcome and should be treated together.
-            </p>
-          </div>
+    <section class="section case-section" id="rag-chatbot">
+      <div class="container case-layout">
+        <aside class="case-meta">
+          <p class="eyebrow">RAG · Fine tuning · Graph data</p>
+          <h2>RAG chatbot with custom fine tuned models</h2>
+          <p>Contextual question answering over heterogeneous domain knowledge with controlled generation and traceability.</p>
+        </aside>
+        <div class="stack">
+          <article class="card"><h3>Context</h3><p>Accessing structured and unstructured knowledge across systems is often fragmented, especially when domain terminology and relationships matter.</p></article>
+          <article class="card"><h3>Value question</h3><p>Can a retrieval augmented architecture provide useful answers while keeping source grounding, transparency, and domain relevance under control?</p></article>
+          <article class="card"><h3>Constraints</h3><ul class="clean-list"><li>Heterogeneous data sources including text and graph structured data</li><li>Domain specific semantic understanding</li><li>Traceable and auditable responses</li><li>Interactive performance requirements</li></ul></article>
+          <article class="card"><h3>Approach</h3><p>A modular RAG architecture combined retrieval, embedding similarity search, graph enriched context, and controlled generation. Open source embedding models were fine tuned for domain retrieval, and generative models were aligned with domain terminology.</p></article>
+          <article class="card"><h3>Operational considerations</h3><p>Retrieval quality, confidence thresholds, source traceability, and validation patterns were treated as core design decisions rather than secondary features.</p></article>
+          <article class="card"><h3>Outcome and reflection</h3><p>The chatbot produced coherent responses grounded in underlying sources. The main learning was that retrieval quality and structured context often influence answer quality more than model size.</p></article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="rag-chatbot">
-        <div class="container">
-          <h2>RAG Chatbot with Custom Fine Tuned Models</h2>
-          <p class="muted">
-            Accessing structured and unstructured knowledge across systems is often fragmented. The objective was to build a retrieval augmented generation system for contextual question answering over domain knowledge,
-            with control over data usage, model behavior, and system transparency.
-          </p>
-
-          <div class="split" style="margin-top: 18px;">
-            <div class="card">
-              <h3>Constraints</h3>
-              <ul class="clean-list">
-                <li>Heterogeneous data sources including text and graph structured data</li>
-                <li>Domain specific semantic understanding</li>
-                <li>Traceable and auditable responses</li>
-                <li>Interactive performance requirements</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Approach</h3>
-              <p class="muted">
-                The system was designed as a modular RAG architecture combining retrieval, embedding similarity search, and controlled generation. Open source embedding models were fine tuned for domain retrieval.
-                Generative models were fine tuned to align responses with domain terminology. A graph database enriched retrieval using explicit relationships.
-              </p>
-              <div class="tag-row">
-                <span class="tag">RAG</span>
-                <span class="tag">Fine tuning</span>
-                <span class="tag">Graph data</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top: 18px;">
-            <h3>Outcome and reflection</h3>
-            <p class="muted">
-              The chatbot produced coherent responses grounded in the underlying sources. Domain relevance improved compared to generic embeddings and base models.
-              The main learning was that retrieval quality and structured context often influence answer quality more than model size.
-            </p>
-          </div>
+    <section class="section surface case-section" id="edge-anomaly">
+      <div class="container case-layout">
+        <aside class="case-meta">
+          <p class="eyebrow">Time series · Edge AI · Optimization</p>
+          <h2>Time series anomaly detection on edge microcontroller</h2>
+          <p>Deep learning based anomaly detection deployed on resource constrained hardware.</p>
+        </aside>
+        <div class="stack">
+          <article class="card"><h3>Context</h3><p>Early anomaly detection in sensor signals is critical for reliability and preventive maintenance, but raw signals are noisy and failure modes are rare.</p></article>
+          <article class="card"><h3>Value question</h3><p>Can anomalous patterns be detected in real time on constrained hardware without relying on continuous raw data transmission?</p></article>
+          <article class="card"><h3>Constraints</h3><ul class="clean-list"><li>Noisy and highly variable time series data</li><li>Limited labeled examples for rare failure modes</li><li>Strict memory and compute limits on microcontroller hardware</li><li>Real-time inference and low power requirements</li></ul></article>
+          <article class="card"><h3>Approach</h3><p>Data exploration and preprocessing established a stable training dataset. Multiple architectures were evaluated with attention to robustness and model size. The chosen model was optimized and deployed using a lightweight runtime for on-device inference.</p></article>
+          <article class="card"><h3>Operational considerations</h3><p>The model had to fit hardware limits, latency requirements, power constraints, and maintenance expectations. Accuracy alone was not a sufficient optimization target.</p></article>
+          <article class="card"><h3>Outcome and reflection</h3><p>The deployed system detected anomalous patterns in real time under constrained hardware conditions. The key learning was that model complexity must be aligned with deployment reality.</p></article>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="section surface" id="edge-anomaly">
-        <div class="container">
-          <h2>Time Series Anomaly Detection on Edge Microcontroller</h2>
-          <p class="muted">
-            Early anomaly detection in sensor signals is critical for reliability and preventive maintenance. The goal was to build a deep learning based anomaly detection system for time series data and deploy it on a resource constrained microcontroller.
-          </p>
-
-          <div class="split" style="margin-top: 18px;">
-            <div class="card">
-              <h3>Constraints</h3>
-              <ul class="clean-list">
-                <li>Noisy and highly variable time series data</li>
-                <li>Limited labeled examples for rare failure modes</li>
-                <li>Strict memory and compute limits on microcontroller hardware</li>
-                <li>Real time inference and low power requirements</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Approach</h3>
-              <p class="muted">
-                Data exploration and preprocessing established a stable training dataset. Multiple architectures were evaluated with attention to robustness and model size.
-                The chosen model was optimized and deployed using a lightweight runtime for on device inference.
-              </p>
-              <div class="tag-row">
-                <span class="tag">Deep learning</span>
-                <span class="tag">Edge AI</span>
-                <span class="tag">Optimization</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top: 18px;">
-            <h3>Outcome and reflection</h3>
-            <p class="muted">
-              The deployed system detected anomalous patterns in real time under constrained hardware conditions. Edge inference reduced latency and avoided transmitting raw sensor data.
-              The key learning was that aligning model complexity with deployment reality often matters more than maximizing accuracy in isolation.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="footer-content">
-          <p class="muted">
-            Interested in applied AI systems or collaborative work.
-          </p>
-          <a href="contact.html" class="link">Get in touch</a>
-        </div>
-      </footer>
-    </main>
-    <script>
-        const toggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
-
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-    </script>
-  </body>
+  <footer class="footer"><div class="container footer-grid"><p>Applied AI work across strategy, systems, governance, and implementation.</p><a href="contact.html" class="btn btn-secondary">Contact</a></div></footer>
+  <script src="script.js"></script>
+</body>
 </html>

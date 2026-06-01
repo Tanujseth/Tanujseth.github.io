@@ -1,207 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="base.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </head>
-    <body>
-        <header>
-            <div class="header-content">
-                <a href="index.html" class="logo">Tanuj Seth</a>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    ☰
-                </button>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="work.html">Use Cases</a></li>
-                        <li><a href="practice.html">Beyond Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanuj Seth | Applied AI</title>
+  <link rel="stylesheet" href="base.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a href="index.html" class="logo">Tanuj Seth</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="perspective.html">Perspective</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Applied AI systems · Enterprise AI · Strategy · Implementation</p>
+          <h1>Applied AI under real constraints</h1>
+          <p class="hero-copy">
+            Selected work and perspective on AI initiatives where strategy, data, models, infrastructure,
+            governance, and stakeholder alignment all shape the outcome.
+          </p>
+          <div class="hero-actions">
+            <a href="work.html" class="btn btn-primary">View work</a>
+            <a href="perspective.html" class="btn btn-secondary">Read perspective</a>
+          </div>
+        </div>
+        <figure class="profile-figure" aria-label="Profile image area">
+          <img src="assets/images/profile_img_01.jpg" alt="Tanuj Seth" onerror="this.closest('.profile-figure').classList.add('profile-figure--fallback'); this.remove();" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>AI work is more than model development.</h2>
+          <p class="lead muted">
+            Successful implementation depends on problem framing, measurable value, data readiness,
+            technical feasibility, operating responsibilities, governance, and adoption across the organization.
+          </p>
+        </div>
+        <div class="grid-4">
+          <article class="card dimension-card">
+            <span class="dimension-number">01</span>
+            <div>
+              <h3>Strategy and value</h3>
+              <p>Why AI, where it fits company strategy, and which use cases justify investment.</p>
             </div>
-        </header>
+          </article>
+          <article class="card dimension-card">
+            <span class="dimension-number">02</span>
+            <div>
+              <h3>Data and foundations</h3>
+              <p>Data availability, governance, GDPR, architecture, cloud readiness, and scaling paths.</p>
+            </div>
+          </article>
+          <article class="card dimension-card">
+            <span class="dimension-number">03</span>
+            <div>
+              <h3>Implementation and enterprise integration</h3>
+              <p>From prototype to integration, monitoring, validation, and maintainable workflows within existing enterprise landscapes, including SAP Business AI. </p>
+            </div>
+          </article>
+          <article class="card dimension-card">
+            <span class="dimension-number">04</span>
+            <div>
+              <h3>Governance and adoption</h3>
+              <p>Roles, risk, compliance, responsible AI, stakeholder communication, and culture.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <main>
-            <section id="hero">
-                <div class="hero-container">
-                    <img src="assets/images/profile_img_01.jpg" alt="Profile image" class="hero-profile-image"/>
-                    <div class="hero-content">
-                        <h1>Applied AI in complex environments</h1>
-                        <p>
-                            Engineering intelligent systems where data, models, and operational
-                            constraints meet. Specializing in end to end solutions that are
-                            dependable, maintainable, and practical.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="work.html" class="btn btn-primary">Explore selected work</a>
-                            <a href="contact.html" class="btn btn-secondary">Contact and collaborate</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="section surface">
+      <div class="container">
+        <div class="section-header">
+          <h2>Selected work</h2>
+          <p class="muted">A curated set of applied AI cases focused on technical decisions, operational constraints, and lessons learned.</p>
+        </div>
+        <div class="grid-4">
+          <a class="case-card" href="work.html#meter-reading">
+            <div>
+              <h3>AI based meter reading</h3>
+              <p>Detection, OCR, and validation workflows for structured extraction from meter images.</p>
+            </div>
+            <div class="tag-row"><span class="tag">Computer vision</span><span class="tag">OCR</span></div>
+          </a>
+          <a class="case-card" href="work.html#chip-detection">
+            <div>
+              <h3>Chip detection in manufacturing</h3>
+              <p>Visual anomaly detection designed for production conditions and operator feedback.</p>
+            </div>
+            <div class="tag-row"><span class="tag">Edge</span><span class="tag">Industrial AI</span></div>
+          </a>
+          <a class="case-card" href="work.html#rag-chatbot">
+            <div>
+              <h3>RAG chatbot with tuned models</h3>
+              <p>Retrieval, embeddings, graph context, and controlled generation for traceable answers.</p>
+            </div>
+            <div class="tag-row"><span class="tag">RAG</span><span class="tag">Graph data</span></div>
+          </a>
+          <a class="case-card" href="work.html#edge-anomaly">
+            <div>
+              <h3>Edge anomaly detection</h3>
+              <p>Time series anomaly detection deployed on constrained microcontroller hardware.</p>
+            </div>
+            <div class="tag-row"><span class="tag">Time series</span><span class="tag">TinyML</span></div>
+          </a>
+        </div>
+        <div class="action-row">
+          <a href="work.html" class="btn btn-light">Open work overview</a>
+        </div>
+      </div>
+    </section>
 
-            <section class="section surface">
-                <div class="container">
-                    <h2>Focus areas</h2>
-                    <p class="muted">Emphasis is placed on solutions that can be deployed, operated, and evolved within real technical and organizational constraints.</p>
-                    <div class="cards-grid" style="margin-top: 18px;">
-                        <div class="card">
-                            <h3>Applied machine learning</h3>
-                            <p>Model training, evaluation, and iteration with an emphasis on real data quality and failure modes.</p>
-                            <div class="tag-row">
-                                <span class="tag">Deep learning</span>
-                                <span class="tag">Time series</span>
-                                <span class="tag">Computer vision</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3>End to end AI systems</h3>
-                            <p>From data ingestion and pipelines to deployment, monitoring, and human validation workflows.</p>
-                            <div class="tag-row">
-                                <span class="tag">Architecture</span>
-                                <span class="tag">MLOps</span>
-                                <span class="tag">Edge</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3>Generative AI with control</h3>
-                            <p>RAG systems, fine tuned models, and retrieval design with an emphasis on traceability and trust.</p>
-                            <div class="tag-row">
-                                <span class="tag">RAG</span>
-                                <span class="tag">Fine tuning</span>
-                                <span class="tag">Graph data</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3>Agentic AI and Orchestrated Systems</h3>
-                            <p> Design and integration of task-oriented AI agents that interact with tools,
-                                data sources, and enterprise systems under defined constraints. Focus on
-                                orchestration, control, and transparency rather than full autonomy.</p>
-                            <div class="tag-row">
-                                <span class="tag">Joule</span>
-                                <span class="tag">SAP Business AI</span>
-                                <span class="tag">Tool-Using LLMs</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3>Rapid Prototyping and Experimental AI</h3>
-                            <p>
-                                Prototyping as a structured step between use case ideation and production-level
-                                AI systems. Prototypes are used to validate data availability, model behavior,
-                                and system assumptions before committing to full-scale implementation.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Use Case Validation</span>
-                                <span class="tag">Feasibility Assessment</span>
-                                <span class="tag">Production Readiness</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3>AI Governance and Responsible Design</h3>
-                            <p>
-                                Design of AI systems with attention to governance, transparency, and operational
-                                responsibility. Regulatory and organizational constraints are treated as design
-                                inputs that shape architecture and workflows.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">EU AI Act</span>
-                                <span class="tag">Human-in-the-Loop</span>
-                                <span class="tag">Compliance by Design</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section
-            
-            <section class="section">
-                <div class="container split">
-                    <div>
-                        <h2>Interpreting the work</h2>
-                        <p class="muted">
-                            The projects shown here are selected for the decisions they required and the
-                            constraints they exposed. Most evolved through trade-offs around data, systems,
-                            and operational realities rather than following a predefined path.
-                        </p>
-                        <a href="about.html" class="link">More on perspective</a>
-                    </div>
-                    <div>
-                        <div class="card">
-                            <h3>Scope</h3>
-                            <p>
-                                A focused selection of applied AI projects and system-level work.
-                                Not a complete catalogue.
-                            </p>
-                            <div class="tag-row">
-                                <span class="tag">Curated</span>
-                                <span class="tag">Applied</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <div class="section-header">
+            <h2>Perspective before implementation</h2>
+            <p class="muted">
+              AI initiatives require a shared understanding of value, feasibility, risk, responsibilities,
+              and long-term operation before technology choices become meaningful.
+            </p>
+          </div>
+          <a href="perspective.html" class="link">Explore the implementation perspective</a>
+        </div>
+        <div class="card">
+          <h3>Practice beyond projects</h3>
+          <p>
+            Workshops, enablement, mentoring, and professional exchange support the translation of AI interest
+            into concrete use cases, realistic prototypes, and responsible implementation paths.
+          </p>
+          <div class="action-row">
+            <a href="practice.html" class="link">View practice</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <section class="section surface">
-                <div class="container">
-                    <h2>Selected work</h2>
-                    <p class="muted">
-                        A curated set of projects focused on applied AI systems and the constraints they operate within.
-                    </p>
-
-                    <div class="cards-grid" style="margin-top: 18px;">
-                        <a class="card" href="work.html#chip-detection" style="text-decoration:none; color: inherit;">
-                            <h3>Computer vision in manufacturing</h3>
-                            <p>Chip detection system designed for real production conditions, including deployment constraints and operator feedback.</p>
-                        </a>
-
-                        <a class="card" href="work.html#rag-chatbot" style="text-decoration:none; color: inherit;">
-                            <h3>RAG chatbot with fine tuned models</h3>
-                            <p>Retrieval architecture combining embeddings, graph data, and controlled generation for traceable answers.</p>
-                        </a>
-
-                        <a class="card" href="work.html#edge-anomaly" style="text-decoration:none; color: inherit;">
-                            <h3>Time series anomaly detection on edge</h3>
-                            <p>Deep learning model development and deployment on microcontroller hardware for real time inference.</p>
-                        </a>
-
-                        <a class="card" href="work.html#meter-reading" style="text-decoration:none; color: inherit;">
-                            <h3>AI meter reading system</h3>
-                            <p>SaaS style pipeline combining detection, OCR, and manual validation workflows for utilities.</p>
-                        </a>
-                    </div>
-
-                    <div style="margin-top: 18px;">
-                        <a href="work.html" class="link">View all selected work</a>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="footer">
-                <div class="footer-content container">
-                    <div class="footer-text">
-                        <h3>Contact</h3>
-                        <p class="muted">
-                            If you are working on applied AI systems or complex technical problems and value thoughtful,
-                            grounded solutions, feel free to reach out.
-                        </p>
-                        <a href="contact.html" class="link">Get in touch</a>
-                    </div>
-                </div>
-            </footer>
-        </main>
-
-        <script>
-        const toggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
-
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-        </script>
-
-    </body>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <p>Open to professional exchange around applied AI systems, implementation strategy, and responsible deployment.</p>
+      </div>
+      <a href="contact.html" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
